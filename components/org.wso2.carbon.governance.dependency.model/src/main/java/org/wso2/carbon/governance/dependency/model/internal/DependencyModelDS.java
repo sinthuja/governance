@@ -25,11 +25,15 @@ import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.component.annotations.ReferenceCardinality;
 import org.osgi.service.component.annotations.ReferencePolicy;
-import org.wso2.carbon.governance.dependency.model.DependencyModelManager;
 import org.wso2.carbon.governance.dependency.model.api.DependencyModelAPI;
 import org.wso2.carbon.kernel.CarbonRuntime;
 import org.wso2.msf4j.MicroservicesRunner;
 
+/**
+ * This is the declarative service component of the governance dependency model component,
+ * which is responsible for listening on the required osgi services and exposing the services so that
+ * other components can use them.
+ */
 @Component(
         name = "org.wso2.carbon.governance.dependency.model.internal.DependencyModelDS",
         immediate = true

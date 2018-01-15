@@ -17,15 +17,17 @@
 */
 package org.wso2.carbon.governance.dependency.model.internal;
 
-import org.wso2.carbon.governance.dependency.model.DependencyModelManager;
 import org.wso2.carbon.kernel.CarbonRuntime;
 import org.wso2.msf4j.MicroservicesRunner;
 
+/**
+ * This is a static class which holds the references of the OSGI services registered.
+ */
 public class ServiceHolder {
     private static CarbonRuntime carbonRuntime;
     private static MicroservicesRunner microservicesRunner;
 
-    private ServiceHolder(){
+    private ServiceHolder() {
     }
 
     public static CarbonRuntime getCarbonRuntime() {
